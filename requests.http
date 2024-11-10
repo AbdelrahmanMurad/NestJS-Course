@@ -1,0 +1,23 @@
+### List all messages
+GET http://localhost:3000/messages
+
+### Create a new Message
+POST http://localhost:3000/messages
+Content-Type: application/json
+# To make a body, you need an Empty Line.
+
+{
+    // Test Validation
+    
+    // "content": 1
+    // "content": null
+
+    "content": "This is a test message."
+    
+    // "author": "John Doe",
+    // "date": "2022-01-01T12:00:00Z"
+}
+
+### Get a specific Message
+GET http://localhost:3000/messages/2143123
+# GET http://localhost:3000/messages/{id}
