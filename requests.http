@@ -12,12 +12,12 @@ Content-Type: application/json
     // "content": 1
     // "content": null
 
-    "content": "This is a test message."
+    "content": "Hi Thssssssssere"
     
     // "author": "John Doe",
     // "date": "2022-01-01T12:00:00Z"
 }
 
 ### Get a specific Message
-GET http://localhost:3000/messages/2143123
+GET http://localhost:3000/messages/720
 # GET http://localhost:3000/messages/{id}
