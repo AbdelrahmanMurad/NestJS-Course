@@ -1,8 +1,7 @@
-import { Controller, Get, Injectable } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
 import { CpuService } from 'src/cpu/cpu.service';
 import { DiskService } from 'src/disk/disk.service';
 
-@Injectable()
 @Controller('computer')
 export class ComputerController {
     constructor(

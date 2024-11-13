@@ -25,7 +25,8 @@ export class MessagesRepository {
 
         //writeFile: add newMessage to messages
         await writeFile('messages.json', JSON.stringify(messages));
-        // JSON.stringify(): Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
+        // JSON.stringify(): Converts the object to string.
+        // writeFile convert the string to json.
     }
 
     // Helper method to read messages with error handling
