@@ -1,0 +1,8 @@
+### Create User
+POST http://localhost:5000/auth/signup
+content-type: application/json
+
+{
+    "email":"yomna@gmail.com",
+    "password":2"knomna & bee & baba & mamo & mama & teta"
+}
