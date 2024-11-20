@@ -27,10 +27,3 @@ export class UserEntity {
         console.log('Removed User with id', this.id);
     }
 }
-
-/* 
-    Hooks Decorators:
-    @AfterInsert()
-    @AfterUpdate()
-    @AfterRemove()
-*/

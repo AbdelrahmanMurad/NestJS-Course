@@ -3,23 +3,23 @@ POST http://localhost:5000/auth/signup
 content-type: application/json
 
 {
-    "email":"b@gmail.com",
+    "email":"murad@gmail.com",
     "password":"**************"
 }
 
 ### Find User By ID
-GET http://localhost:5000/auth/2
+GET http://localhost:5000/auth/10
 
 ### Find All Users By Email
-GET http://localhost:5000/auth?email=b@gmail.com
+GET http://localhost:5000/auth?email=sada@gmail.com
 
 ### Remove User
 DELETE http://localhost:5000/auth/8
 
 ### Update User
-PATCH http://localhost:5000/auth/1
+PATCH http://localhost:5000/auth/9
 Content-Type: application/json
 
 {
-    "password":"boga boga boga"
+    "password":"sada is my friend"
 }
