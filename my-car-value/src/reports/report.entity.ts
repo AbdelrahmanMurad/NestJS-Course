@@ -8,5 +8,3 @@ export class ReportEntity {
     @Column()
     price: number
 }
-
-// we will come to these decorators later

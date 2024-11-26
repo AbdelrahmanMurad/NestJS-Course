@@ -3,8 +3,8 @@ POST http://localhost:5000/auth/signup
 content-type: application/json
 
 {
-    "email":"murad@gmail.com",
-    "password":"**************"
+    "email":"aafdsaml@gmail.com",
+    "password":"THis is @@@ Password - Hard"
 }
 
 ### Find User By ID
@@ -21,5 +21,36 @@ PATCH http://localhost:5000/auth/9
 Content-Type: application/json
 
 {
-    "password":"sada is my friend"
+    "password":"*****************************"
 }
+
+### Sign-up
+POST http://localhost:5000/auth/signup
+Content-Type: application/json
+
+{
+    "email":"test2@test.com",
+    "password":"test12345"
+}
+
+### Sign-in
+POST http://localhost:5000/auth/signin
+Content-Type: application/json
+
+{
+    "email":"test2@test.com",
+    "password":"test12345"
+}
+
+### Sign-out
+POST http://localhost:5000/auth/signout
+
+### Who Am I
+Get http://localhost:5000/auth/whoami
+
+### Set Cookie
+# GET http://localhost:5000/auth/colors/blue
+
+### Get Cookie
+# GET http://localhost:5000/auth/colors
+

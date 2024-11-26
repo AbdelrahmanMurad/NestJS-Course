@@ -17,6 +17,7 @@ export class SerializeInterceptor implements NestInterceptor {
     }
 }
 
+//Type Safety
 interface ClassConstructor {
     new(...args: any[]): {}
 }

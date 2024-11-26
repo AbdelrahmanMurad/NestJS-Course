@@ -5,16 +5,8 @@ import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class UsersService {
-    // Here where we call the repo, by the di.
-    /* old structure of making di
-    repo: Repository<UserEntity>
-    constructor(repo: Repository<UserEntity>) {
-        this.repo = repo;
-    }
-    */
 
-    // Refactoring
-    constructor(@InjectRepository(UserEntity) private repo: Repository<UserEntity>) { } // this line just in service
+    constructor(@InjectRepository(UserEntity) private repo: Repository<UserEntity>) { }
 
     create(email: string, password: string) {
         const user = this.repo.create({ email, password });
@@ -22,6 +14,7 @@ export class UsersService {
     }
 
     findOne(id: number) {
+        if (!id) throw new NotFoundException('Entity with the specified ID was not found');
         return this.repo.findOneBy({ id });
     }
 

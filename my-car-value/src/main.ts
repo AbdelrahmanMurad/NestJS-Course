@@ -1,15 +1,21 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
+// import cookieSession from 'cookie-session'; // this import has problem with TS.
+const cookieSession = require("cookie-session"); // import manually
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  // Enable global validation pipe
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true
     })
   )
+  app.use(
+    cookieSession({
+      keys: ["asdfasdf"],
+    }),
+  );
   await app.listen(process.env.PORT ?? 5000);
 }
 bootstrap();
