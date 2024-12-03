@@ -14,7 +14,7 @@ export class UsersService {
     }
 
     findOne(id: number) {
-        if (!id) throw new NotFoundException('Entity with the specified ID was not found');
+        // if (!id) throw new NotFoundException('Entity with the specified ID was not found');
         return this.repo.findOneBy({ id });
     }
 

@@ -1,0 +1,15 @@
+# create report
+# dont forget, you need to sign in first.
+# What Does the 403 Forbidden Error Mean? The HTTP status code '403 forbidden—you don't have permission to access this resource' is displayed when a web server recognizes a user's request but is unable to allow additional access.
+POST http://localhost:5000/reports
+Content-Type: application/json
+
+{
+    "make": "Toyota",
+    "model": "Corolla",
+    "year": 1980,
+    "mileage": 100000,
+    "lng":0,
+    "lat":0,
+    "price":500000
+}

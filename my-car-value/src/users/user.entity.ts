@@ -1,4 +1,8 @@
-import { AfterInsert, AfterRemove, AfterUpdate, BeforeRemove, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { ReportEntity } from "src/reports/report.entity";
+import { AfterInsert, AfterRemove, AfterUpdate, BeforeRemove, Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+
+console.log(ReportEntity);
+
 
 @Entity()
 export class UserEntity {
@@ -26,4 +30,7 @@ export class UserEntity {
     logRemove() {
         console.log('Removed User with id', this.id);
     }
-}
+
+    @OneToMany(() => ReportEntity, (report) => report.user)
+    reports: ReportEntity[]; // why array ?? because group of reports
+}   
