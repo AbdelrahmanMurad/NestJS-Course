@@ -5,6 +5,9 @@ export class ReportDto {
     id: number;
 
     @Expose()
+    approve: boolean
+
+    @Expose()
     price: number
 
     @Expose()
@@ -19,7 +22,7 @@ export class ReportDto {
     @Expose()
     lng: number
 
-
+    @Expose()
     lat: number
 
     @Expose()

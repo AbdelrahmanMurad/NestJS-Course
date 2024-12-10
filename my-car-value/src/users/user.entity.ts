@@ -1,13 +1,17 @@
 import { ReportEntity } from "src/reports/report.entity";
 import { AfterInsert, AfterRemove, AfterUpdate, BeforeRemove, Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
-console.log(ReportEntity);
+// console.log(ReportEntity);
 
 
 @Entity()
 export class UserEntity {
     @PrimaryGeneratedColumn()
     id: number;
+
+    // Thats for now. (we will update it in the future)
+    @Column({ default: true })
+    admin: boolean
 
     @Column()
     email: string;
